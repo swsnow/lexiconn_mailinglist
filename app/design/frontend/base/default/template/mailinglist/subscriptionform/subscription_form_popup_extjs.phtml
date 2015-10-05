@@ -1,0 +1,93 @@
+
+<div class="lex_subscribe_wrap">
+    <a class="lex_subscribe_link" id="lex_subscribe_link">Subscribe to Mailing List</a>
+</div>
+<script type="text/javascript">
+
+Ext.form.Field.prototype.msgTarget = 'under';
+
+Ext.onReady(function(){
+    window.lexSubscribe = new Ext.Window({
+        title:'<?php echo $this->getWidgetTitle(); ?>',
+        autoShow: false,
+        width:450,
+        height:300,
+        minimizable:false,
+        maximizable:false,
+        closable: true,
+        modal: true,
+        closeAction: 'hide',
+        layout: 'fit',
+        items: new Ext.FormPanel({
+        	labelAlign: 'left',
+            labelWidth: "160",
+        	bodyStyle:'padding:5px',
+        	items: [{
+        		xtype:'textfield',
+                name: 'email',
+                allowBlank: false,
+                vtype: 'email',
+                fieldLabel: "Email",
+                vtypeText: 'Please enter a valid email address'
+        	},
+        	
+<?php
+                	$cfields = explode(",", $this->getCustomFields());
+
+                	if(count($cfields) > 0 && !empty($cfields[0])){  
+                    	foreach($cfields as $field){
+                    	    $helper = Mage::helper('mailinglist');
+                    	    $fieldData = $helper->getCustomField($field);
+                    	    $fieldLabel = $fieldData[0]['title'];
+                    	    $fieldName = "field[" . $field . ",0]";
+    
+                    	    echo "{ xtype:'textfield', fieldLabel: '$fieldLabel', name: '$fieldName;' },";
+                    	}
+                	}
+                	
+?>
+
+
+        	{
+        		xtype:'hidden',
+                name: 'field[]',
+                hidden: true,
+                value: ''
+        	},{
+        		xtype:'hidden',
+                name: 'nlbox[]',
+                value: '<?php echo $this->getListSelection(); ?>',
+                hidden: true
+        	},{
+        		xtype:'hidden',
+                name: 'funcml',
+                value: 'add',
+                hidden: true
+        	},{
+        		xtype:'hidden',
+                name: '_charset',
+                value: 'utf-8',
+                hidden: true
+        	}]
+        }),
+
+        buttons: [{
+            text:'Subscribe',
+            disabled:true
+        },{
+            text: 'Close',
+            handler: function(){
+            	 window.lexSubscribe.hide();
+            }
+        }]
+       
+    });
+
+    Ext.get('lex_subscribe_link').on('click', function(){
+    	window.lexSubscribe.show();
+    });
+   
+});
+
+
+</script>
