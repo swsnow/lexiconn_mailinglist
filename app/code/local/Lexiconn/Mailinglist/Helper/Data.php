@@ -9,7 +9,7 @@
 
 /**
  * Mailinglist helper
- *
+ * Test 123
  */
 
 class Lexiconn_Mailinglist_Helper_Data extends Mage_Core_Helper_Abstract

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="app/code/local/Lexiconn/Mailinglist/Adminhtml/Mailinglist/Catalog/Category"/>
+	<buildpathentry kind="src" path="app/code/local/Lexiconn/Mailinglist/Block"/>
+	<buildpathentry kind="src" path="app/code/local/Lexiconn/Mailinglist/controllers"/>
+	<buildpathentry kind="src" path="app/code/local/Lexiconn/Mailinglist/Helper"/>
+	<buildpathentry kind="src" path="app/code/local/Lexiconn/Mailinglist/Model"/>
+	<buildpathentry kind="src" path="app/design/adminhtml/default/default/template/mailinglist/customer"/>
+	<buildpathentry kind="src" path="app/design/adminhtml/default/default/template/mailinglist/queue"/>
+	<buildpathentry kind="src" path="app/design/adminhtml/default/default/template/mailinglist/subscriber"/>
+	<buildpathentry kind="src" path="app/design/adminhtml/default/default/template/mailinglist/tab"/>
+	<buildpathentry kind="src" path="app/design/frontend/base/default/template/mailinglist"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+</buildpath>
