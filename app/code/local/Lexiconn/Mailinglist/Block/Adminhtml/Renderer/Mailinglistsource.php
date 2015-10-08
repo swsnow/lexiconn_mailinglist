@@ -7,9 +7,6 @@ class Lexiconn_Mailinglist_Block_Adminhtml_Renderer_Mailinglistsource extends Ma
     	 $helper = Mage::helper('mailinglist');
          $source = $helper->getMailinglistSource($row->getData($this->getColumn()->getIndex()));
          
-        // print_r($row->getData());
-
-         
          echo (string)$source;
     }
 }
