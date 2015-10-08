@@ -5,7 +5,6 @@
 	<buildpathentry kind="src" path="app/code/local/Lexiconn/Mailinglist/controllers"/>
 	<buildpathentry kind="src" path="app/code/local/Lexiconn/Mailinglist/Helper"/>
 	<buildpathentry kind="src" path="app/code/local/Lexiconn/Mailinglist/Model"/>
-	<buildpathentry kind="src" path="app/design/adminhtml/default/default/template/mailinglist/customer"/>
 	<buildpathentry kind="src" path="app/design/adminhtml/default/default/template/mailinglist/queue"/>
 	<buildpathentry kind="src" path="app/design/adminhtml/default/default/template/mailinglist/subscriber"/>
 	<buildpathentry kind="src" path="app/design/adminhtml/default/default/template/mailinglist/tab"/>
