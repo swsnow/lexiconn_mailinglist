@@ -25,15 +25,6 @@ class Lexiconn_Mailinglist_Block_Subscriptionforminline
        
        return fieldData;
    }
-   
-   
-   protected function getCaptcha(){
-       $block = $this->getLayout()->createBlock('captcha/captcha');
-       
-       $html = "Test 123";
-       return $html;
-       
-   }
 
    protected function _toHtml()
    {
