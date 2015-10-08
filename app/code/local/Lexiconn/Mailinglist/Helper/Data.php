@@ -175,7 +175,7 @@ class Lexiconn_Mailinglist_Helper_Data extends Mage_Core_Helper_Abstract
     }
     
     /**
-     * Initial query to see if subscriber exists
+     * Initial query to see if subscriber exists on a list by list id
      *
      *
      */
