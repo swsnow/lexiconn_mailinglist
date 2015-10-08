@@ -113,8 +113,18 @@ class Lexiconn_Mailinglist_Adminhtml_Mailinglist_SubscriberController extends Ma
     public function viewcampaignAction(){
     	$helper = Mage::helper('mailinglist');
     	 
-    	$listId = $this->getRequest()->getParam('id');
+    	$rowinfo = $this->getRequest()->getParam('id');
     
+    	print_r($rowinfo);
+    	
+    	$listSplit = explode(":", $rowinfo);
+    	
+    	$email = $listSplit[1];
+    	
+    	$listId = $listSplit[2];
+    	
+    	print_r($email);
+    	
     	print_r($listId);
     	
     	//$this->_redirect("*/customer/edit/id/$customer_id");
