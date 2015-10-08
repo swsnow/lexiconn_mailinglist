@@ -61,7 +61,7 @@ class Lexiconn_Mailinglist_Adminhtml_Mailinglist_SubscriberController extends Ma
       
         $subscribersIds = $this->getRequest()->getParam('id');
         
-        print_r($subscribers);
+        print_r($subscribersIds);
     	die();
         $subscribers = explode(",", $subscribersIds);
         $helper = Mage::helper('mailinglist');
