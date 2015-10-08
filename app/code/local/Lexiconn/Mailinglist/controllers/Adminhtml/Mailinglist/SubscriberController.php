@@ -31,9 +31,9 @@ class Lexiconn_Mailinglist_Adminhtml_Mailinglist_SubscriberController extends Ma
     
     public function removeAction(){
       
-        $subscribersIds = $this->getRequest()->getParam('id');
+        $subscribers = $this->getRequest()->getParam('id');
         
-        $subscribers = explode(",", $subscribersIds);
+       // $subscribers = explode(",", $subscribersIds);
         $helper = Mage::helper('mailinglist');
         
         foreach($subscribers as $subscriber){
@@ -89,9 +89,9 @@ class Lexiconn_Mailinglist_Adminhtml_Mailinglist_SubscriberController extends Ma
     
         $customer = $helper->getSelectedCustomer();
        
-        $subscribersIds = $this->getRequest()->getParam('id');
+        $subscribers = $this->getRequest()->getParam('id');
     
-        $subscribers = explode(",", $subscribersIds);
+       // $subscribers = explode(",", $subscribersIds);
         $helper = Mage::helper('mailinglist');
     
         foreach($subscribers as $subscriber){
