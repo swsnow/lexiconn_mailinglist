@@ -151,14 +151,13 @@ class Lexiconn_Mailinglist_Block_Adminhtml_Customer_Edit_Tab_Mailinglist_Grid
         return 'mailinglist/order_grid_collection';
     }
     
-    public function getRowUrl($row)
-    {
-    	Mage::fireLog($this->getRequest()->getParam('udate'));
-       // if (Mage::getSingleton('admin/session')->isAllowed('mailinglist/subscriber/actions/view')) {
-            return $this->getUrl('*/mailinglist_subscriber/viewcampaign', array('id'=>$row->getId()));
-        //}
-        //return false;
-    }
+   
+   // public function getRowUrl($row)
+   // {
+   // 	Mage::fireLog($this->getRequest()->getParam('udate'));
+    //    return $this->getUrl('*/mailinglist_subscriber/viewcampaign', array('id'=>$row->getId()));
+   // }
+    //
 
 }
     
