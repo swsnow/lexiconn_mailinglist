@@ -59,11 +59,11 @@ class Lexiconn_Mailinglist_Adminhtml_Mailinglist_SubscriberController extends Ma
         
         $customer = $helper->getSelectedCustomer();
       
-        $subscribersIds = $this->getRequest()->getParam('id');
+        $subscribers = $this->getRequest()->getParam('id');
         
-        print_r($subscribersIds);
-    	die();
-        $subscribers = explode(",", $subscribersIds);
+        //print_r($subscribersIds);
+    	//die();
+       // $subscribers = explode(",", $subscribersIds);
         $helper = Mage::helper('mailinglist');
     
         foreach($subscribers as $subscriber){
