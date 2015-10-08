@@ -114,10 +114,12 @@ class Lexiconn_Mailinglist_Adminhtml_Mailinglist_SubscriberController extends Ma
     	$helper = Mage::helper('mailinglist');
     
     	$customer = $helper->getSelectedCustomer();
+    	
+    	Mage::fireLog($customer);
     	 
-    	$listId = $this->getRequest()->getParam('listid');
+    	//$listId = $this->getRequest()->getParam('listid');
     
-    	print_r($listId);
+    	//print_r($listId);
     	
     	//$this->_redirect("*/customer/edit/id/$customer_id");
     
