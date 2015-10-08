@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * @category    Lexiconn
+ * @package     Lexiconn_Mailinglist Copyright (c) 2015 LexiConn Internet Services, Inc. (http://www.lexiconn.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
 class Lexiconn_Mailinglist_Block_Adminhtml_Catalog_Category_Widget_Chooser
     extends Mage_Adminhtml_Block_Catalog_Category_Widget_Chooser
 {
@@ -66,16 +70,7 @@ class Lexiconn_Mailinglist_Block_Adminhtml_Catalog_Category_Widget_Chooser
       */
      protected function _getNodeJson($node, $level = 0)
      {
-         /*
-         $item = parent::_getNodeJson($node, $level);
-         if (in_array($node->getId(), $this->getSelectedCategories())) {
-             $item['checked'] = true;
-         }
-         $item['is_anchor'] = (int)$node->getIsAnchor();
-         $item['url_key'] = $node->getData('url_key');
-         Mage::fireLog($item, "Lexiconn_Mailinglist_Block_Adminhtml_Catalog_Category_Widget_Chooser");
-         return $item;
-         */
+        
          $item = array(	'text' =>'Root',
                  'id' => 1,
                  'store' => 0,
