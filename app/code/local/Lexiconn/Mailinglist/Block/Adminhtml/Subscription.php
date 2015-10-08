@@ -13,10 +13,6 @@ class Lexiconn_Mailinglist_Block_Adminhtml_Subscription
 
       protected function _prepareLayout()
       {
-          //var_dump($this->_blockGroup.'/' . $this->_controller . '_grid');
-          //$class = Mage::getConfig()->getBlockClassName('lexiconn_mailinglist/adminhtml_subscription_grid');
-          //var_dump($class);
-                //$this->_removeButton('add');
                 return parent::_prepareLayout();
       }
 }

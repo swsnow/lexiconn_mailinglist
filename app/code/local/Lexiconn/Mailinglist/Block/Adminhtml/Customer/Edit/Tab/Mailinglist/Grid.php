@@ -1,5 +1,13 @@
 <?php
-
+/**
+ * @category    Lexiconn
+ * @package     Lexiconn_Mailinglist Copyright (c) 2015 LexiConn Internet Services, Inc. (http://www.lexiconn.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+/**
+ *  Customer Lexiconn Mailinglist Grid
+ *
+ **/
 class Lexiconn_Mailinglist_Block_Adminhtml_Customer_Edit_Tab_Mailinglist_Grid 
     extends Mage_Adminhtml_Block_Widget_Grid
 {
@@ -11,10 +19,6 @@ class Lexiconn_Mailinglist_Block_Adminhtml_Customer_Edit_Tab_Mailinglist_Grid
         $this->setDefaultSort('start_at');
         $this->setDefaultDir('desc');
         
-        //$customer = Mage::registry('current_customer');
-       // Mage::register('lex_customer', $customer);
-       // Mage::fireLog($customer, "Set Customer");
-
         $this->setUseAjax(true);
 
         $this->setEmptyText(Mage::helper('customer')->__('No Newsletter Found'));
@@ -31,25 +35,16 @@ class Lexiconn_Mailinglist_Block_Adminhtml_Customer_Edit_Tab_Mailinglist_Grid
         $email = Mage::registry('subscriber')->getEmail();
         $customer_id = Mage::registry('current_customer')->getId();
         
-        Mage::fireLog($customer_id);
-        Mage::fireLog($email);
-        
         $helper = Mage::helper('mailinglist');
         $items = $helper->getSubscriberInfo($email);
        
         $collection = new Varien_Data_Collection();
         
-        
         if($items != FALSE){
             foreach ($items as $item) {
                 $listid = $item['listid'];
                 $item['id'] = $customer_id . ":" . $email . ':' . $listid;
-                /*
-                $item['id'] = array("customer_id" => $customer_id,
-                                    "email"       => $email,
-                                    "listid"      => $listid,
-                );
-                */
+              
                 $varienObject = new Varien_Object();
                 $varienObject->setData($item);
                 $collection->addItem($varienObject);
@@ -57,7 +52,6 @@ class Lexiconn_Mailinglist_Block_Adminhtml_Customer_Edit_Tab_Mailinglist_Grid
             }
         }
         
-       // Mage::fireLog($collection, "COLLECTION");
         
         $this->setCollection($collection);
 
@@ -120,16 +114,7 @@ class Lexiconn_Mailinglist_Block_Adminhtml_Customer_Edit_Tab_Mailinglist_Grid
             'default'   =>  ' ---- '
         ));
         
-   /*
-        $this->addColumn('action', array(
-            'header'    =>  Mage::helper('customer')->__('Action'),
-            'align'     =>  'center',
-            'filter'    =>  false,
-            'sortable'  =>  false,
-            'renderer'  =>  'adminhtml/customer_edit_tab_newsletter_grid_renderer_action'
-        ));
-   */
-
+ 
         return parent::_prepareColumns();
     }
     
