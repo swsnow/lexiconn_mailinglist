@@ -155,7 +155,7 @@ class Lexiconn_Mailinglist_Block_Adminhtml_Customer_Edit_Tab_Mailinglist_Grid
     {
     	Mage::fireLog($this->getRequest()->getParam('udate'));
        // if (Mage::getSingleton('admin/session')->isAllowed('mailinglist/subscriber/actions/view')) {
-            return $this->getUrl('*/mailinglist_subscriber/viewcampaign', array('listid' => $this->getRequest()->getParam('listid')));
+            return $this->getUrl('*/mailinglist_subscriber/viewcampaign', array('id'=>$row->getId()));
         //}
         //return false;
     }
