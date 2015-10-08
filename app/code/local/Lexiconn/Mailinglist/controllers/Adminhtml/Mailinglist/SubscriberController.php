@@ -97,7 +97,7 @@ class Lexiconn_Mailinglist_Adminhtml_Mailinglist_SubscriberController extends Ma
             $customer_id = $split[0];
             $email = $split[1];
             $lid = $split[2];
-            Mage::fireLog($email . ":" . $lid, "Unsubscribe Subscriber");
+
             $options = array('email'  => $email,
                     'listid' => $lid
             );
@@ -110,6 +110,19 @@ class Lexiconn_Mailinglist_Adminhtml_Mailinglist_SubscriberController extends Ma
     
     }
    
+    public function viewcampaignAction(){
+    	$helper = Mage::helper('mailinglist');
+    
+    	$customer = $helper->getSelectedCustomer();
+    	 
+    	$listId = $this->getRequest()->getParam('listid');
+    
+    	print_r($listId);
+    	
+    	//$this->_redirect("*/customer/edit/id/$customer_id");
+    
+    }
+    
     public function addAction(){
         
     }
