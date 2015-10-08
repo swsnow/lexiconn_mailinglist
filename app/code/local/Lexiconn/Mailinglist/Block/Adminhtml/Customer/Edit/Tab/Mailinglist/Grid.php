@@ -153,9 +153,9 @@ class Lexiconn_Mailinglist_Block_Adminhtml_Customer_Edit_Tab_Mailinglist_Grid
     
     public function getRowUrl($row)
     {
-    	Mage::fireLog($row);
+    	//Mage::fireLog($row);
        // if (Mage::getSingleton('admin/session')->isAllowed('mailinglist/subscriber/actions/view')) {
-            return $this->getUrl('*/mailinglist_subscriber/viewcampaign', array('listid' => $row->getListId()));
+            return $this->getUrl('*/mailinglist_subscriber/viewcampaign', array('listid' => $this->getRequest()->getParam('listid')));
         //}
         //return false;
     }
