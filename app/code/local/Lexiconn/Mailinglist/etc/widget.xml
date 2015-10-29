@@ -119,12 +119,6 @@
         		<label>Subscribe Success Text</label>
         		<type>text</type>
         	</subscribe_success_text>
-        	<require_captcha>
-        		<required>0</required>
-        		<visible>1</visible>
-        		<label>Require Captcha</label>
-        		<type>checkbox</type>
-        	</require_captcha>
         	
         </parameters>
     </mailinglist_subscriptionform_popup>
