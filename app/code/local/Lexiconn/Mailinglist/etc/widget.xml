@@ -55,12 +55,6 @@
 			    </helper_block>
 			    <sort_order>12</sort_order>
 			</error_page>
-			<require_captcha>
-        		<required>0</required>
-        		<visible>1</visible>
-        		<label>Require Captcha</label>
-        		<type>checkbox</type>
-        	</require_captcha>
 			
 
         </parameters>
