@@ -1,5 +1,7 @@
 <?php
-
+/*
+ * Controller for admin Lexiconn Mailinglist Menu defined in adminhtml.xml
+ */
 class Lexiconn_Mailinglist_Adminhtml_Mailinglist_SubscriberController extends Mage_Adminhtml_Controller_Action
 {
     
