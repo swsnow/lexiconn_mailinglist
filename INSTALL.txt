@@ -4,8 +4,8 @@ mkdir /home/DOM/Lexiconn
 cd /home/DOM/Lexiconn
 mkdir modules
 cd modules
-mkdir mailinglist
 
+git clone 
 
 
 ln -s /home/DOM/Lexiconn/modules/lexiconn_mailinglist/app/code/local/Lexiconn /home/DOM/www/app/code/local/Lexiconn
