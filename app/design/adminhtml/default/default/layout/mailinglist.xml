@@ -3,24 +3,24 @@
         <adminhtml_customer_edit>
                 <reference name="left">
                         <reference name="customer_edit_tabs">
-                                <block type="lexiconn_mailinglist/adminhtml_customer_edit_tab_mailinglist" 
+                                <block type="mailinglist/adminhtml_customer_edit_tab_mailinglist" 
                                         name="tab_mailinglist_main" 
-                                        template="lexiconn/mailinglist/customer/main.phtml">
+                                        template="mailinglist/customer/main.phtml">
 
                                 </block>
 
                                 <action method="addTab">
                                         <name>lexiconn_mailinglist</name>
-                                        <block>lexiconn_mailinglist/adminhtml_customer_edit_tab_mailinglist</block>
+                                        <block>mailinglist/adminhtml_customer_edit_tab_mailinglist</block>
                                 </action>
                         </reference>
                 </reference>
 
                 <reference name="content">
                         <reference name="customer_edit_tab_mailinglist">
-                                <block type="lexiconn_mailinglist/adminhtml_customer_edit_tab_mailinglist" 
+                                <block type="mailinglist/adminhtml_customer_edit_tab_mailinglist" 
                                         name="tab_mailinglist_main" 
-                                        template="lexiconn/mailinglist/customer/main.phtml">
+                                        template="mailinglist/customer/main.phtml">
 
                                 </block>
                         </reference>

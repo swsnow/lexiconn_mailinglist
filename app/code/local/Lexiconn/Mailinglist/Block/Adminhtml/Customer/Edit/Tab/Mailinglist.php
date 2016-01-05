@@ -8,7 +8,7 @@ class Lexiconn_Mailinglist_Block_Adminhtml_Customer_Edit_Tab_Mailinglist
     public function __construct()
     {
         parent::_construct();
-        $this->setTemplate('lexiconn/mailinglist/customer/main.phtml');
+        $this->setTemplate('mailinglist/customer/main.phtml');
         
     }
     
