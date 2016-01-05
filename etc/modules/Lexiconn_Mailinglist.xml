@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <modules>
-        <Lexiconn_Mailinglist>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Lexiconn_Mailinglist>
-    </modules>
-</config>
